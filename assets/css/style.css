@@ -1,0 +1,489 @@
+/*
+TABLE OF CONTENTS
+    0. General Rules & Utility Classes
+    1. Main page
+    2. How to Play page
+    3. Play page
+    4. Media querries
+*/
+
+/* -------------------- 0. General Rules & Utility Classes -------------------- */
+
+h1, h2, p, figcaption, span, a, li {
+    font-family: Montserrat, sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .875rem;
+    text-align: center;
+    color: #1c4437;
+    line-height: 1.125rem;
+    max-width: 575px;
+    margin: auto;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.bgrd-beige {
+    background-color: #d5e1d7;
+}
+
+.bgrd-green {
+    background-color: #249e76;
+}
+
+.bgrd-lightgreen {
+    background-color: #8ed1aa;
+}
+
+.bgrd-vdarkgreen {
+    background-color: #1c4437;
+}
+
+.bgrd-red {
+    background-color: #eb674d;
+}
+
+.bgrd-vdarkred {
+    background-color: #9e3824;
+}
+
+.bgrd-beigegray {
+    background-color: #676d5f;
+}
+
+.margin-top-twentyfive {
+    margin-top: 25px;
+}
+
+.margin-top-fifty {
+    margin-top: 50px;
+}
+
+.margin-top-seventyfive {
+    margin-top: 75px;
+}
+
+.margin-top-hundred {
+    margin-top: 100px;
+}
+
+.margin-bottom-twentyfive {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-fifty {
+    margin-bottom: 50px;
+}
+
+.margin-bottom-hundred {
+    margin-bottom: 100px;
+}
+
+.padding-top-twentyfive {
+    padding-top: 25px;
+}
+
+.padding-top-fifty {
+    padding-top: 50px;
+}
+
+a {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.menu-absolute {
+    position: absolute;
+    top: 45px;
+    right: 150px;
+}
+
+.btn-header-menu {
+    font-size: 1.375rem;
+    padding: 4px 12px;
+    width: 100px;
+    transition: 0.3s;
+    color: #1c4437;
+    background-color: #d5e1d7;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+a.btn-header-menu:hover {
+    box-shadow: 10px 10px 11px rgba(0,0,0,0.4);
+    color: #1c4437;
+}
+
+.btn-header-play {
+    font-size: 1.375rem;
+    padding: 4px 12px;
+    width: 100px;
+    transition: 0.3s;
+    color: #fff;
+    background-color: #eb674d;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+a.btn-header-play:hover {
+    box-shadow: 10px 10px 11px rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.btn-header-menu-responsive {
+    font-size: 1rem;
+    padding: 3px 5px;
+    width: 30px;
+    transition: 0.3s;
+    color: #1c4437;
+    background-color: #d5e1d7;
+    display: inline-block;
+    margin: 0px 3px;
+}
+
+.btn-header-play-responsive {
+    font-size: 1rem;
+    padding: 3px 5px;
+    width: 30px;
+    transition: 0.3s;
+    color: #fff;
+    background-color: #eb674d;
+    display: inline-block;
+    margin: 0px 3px;
+}
+
+.btn-header-menu-responsive, .btn-header-play-responsive {
+    display: none;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.drop-shadow {
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+}
+
+.header-bar, .footer-bar {
+    background-color: rgba(0,0,0,0.25);
+    width: 100%;
+    margin: auto;
+}
+
+.footer-bar {
+    height: 65px;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-block {
+    display: block;
+}
+
+/* -------------------- 1. Main page -------------------- */
+
+.logo-main {
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.heading-main-small {
+    font-size: 1.625rem;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.background-main {
+    background-color: #186b50;
+    background-image: url(../images/background-main-halftone.png);
+    background-repeat: repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.btn-main {
+    font-size: 1.5rem;
+    width: 260px;
+    color:white;
+    transition: 0.3s;
+    display: block;
+    padding: .4rem .3rem;
+}
+
+a.btn-main:hover {
+    width: 265px;
+    color:white;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+}
+
+/* -------------------- 2. How to Play page -------------------- */
+
+.background-how {
+    background-color: #186b50;
+}
+
+.logo-how {
+    display: block;
+    height: 130px;
+    margin: auto;
+}
+
+.heading-how {
+    padding: 15px 0px;
+}
+
+.howtoplay-content {
+    padding-left: 75px;
+    padding-right: 75px;
+    line-height: 1.5rem;
+}
+
+.img-how-desktop {
+    display: block;
+    margin: auto;
+}
+
+.img-how-mobile {
+    display: none;
+    margin: auto;
+}
+
+/* -------------------- 3. Play page -------------------- */
+
+.background-play {
+    background-color: #186b50;
+    background-image: url("../images/background-game-table.jpg");
+    height: 100vh;
+    background-position: center center;
+}
+
+.player-panel-background {
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    margin: 8px 0px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+}
+
+.player-panel-icons {
+    display: block;
+    margin: auto;
+    font-size: 1.375rem;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.player-panel-cards {
+    margin: 5px;
+}
+
+.player-panel-cards-top {
+    margin: 30px 5px 5px;
+}
+
+.padding-four {
+    padding: 4px;
+}
+
+/* -------------------- 4. Media Querries -------------------- */
+
+@media screen and (max-width: 1199px) {
+	.howtoplay-content {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .menu-absolute {
+        right: 50px;
+    }
+
+    .btn-header-menu, .btn-header-play {
+        font-size: 1rem;
+        padding: 3px 9px;
+        width: 70px;
+        margin: 0px 3px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+   
+}
+
+@media screen and (max-width: 768px) {
+    .player-panel-background {
+        height: auto;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .player-panel-icons {
+        font-size: .875rem;
+        width: 35px;
+        height: 35px;
+        padding:8px;
+    }
+
+    .player-panel-cards, .player-panel-cards-top {
+        display: inline-block;
+    }
+
+    .player-panel-cards {
+        margin: 0px -1px;
+    }
+
+     .player-panel-cards-top {
+         margin: 5px -2px 5px 10px;
+     }
+    
+    .img-how-desktop {
+        display: none;
+    }
+
+    .img-how-mobile {
+        display: block;
+    }
+
+    .btn-header-menu-responsive, .btn-header-play-responsive {
+        display: inline-block;
+    }
+
+    .btn-header-menu, .btn-header-play {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .howtoplay-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+	.logo-main {
+        width: 360px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .logo-how {
+        height: 100px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+
+    .heading-main-small {
+        font-size: 1.125rem;
+    }
+
+    .btn-how {
+        margin-top: 30px;
+    }
+
+    .heading-how {
+        padding: 8px 0px;
+    }
+
+    .menu-absolute {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+	.logo-main {
+        width: 260px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+     .logo-how {
+        height: 65px;
+    }
+
+    .btn-main {
+        font-size: 1.25rem;
+        width: 240px;
+    }
+
+    a.btn-main:hover {
+        width: 245px;
+    }
+
+    .btn-how {
+        font-size: 1rem;
+        width: 70px;
+        transition: 0.3s;
+        display: block;
+        margin-top: 20px;
+        color: #186b50;
+    }
+
+    a.btn-how:hover {
+        font-size: 1.125rem;
+        width: 75px;
+        box-shadow: 8px 8px 10px rgba(0,0,0,0.3);
+        color: #186b50;
+    }
+
+    .menu-absolute {
+        right: 10px;
+        top: 19px;
+    }
+
+    .player-panel-icons {
+        font-size: .75rem;
+        width: 29px;
+        height: 29px;
+        padding:7px;
+    }
+
+    .player-panel-cards {
+        margin: 0px -2px;
+    }
+}

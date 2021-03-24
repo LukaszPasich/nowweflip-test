@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+<title>Now We Flip game</title>
+</head>
+<body>
+    <div class="background-how">
+
+        <!-- HEADER starts here-->
+        <header>
+            <div class="header-bar">
+                <a href="index.html"><img class="logo-how" src="assets/images/now-we-flip-logo.png" alt="Now We Flip logo"></a>
+            </div>
+            <div class="menu-absolute">
+                <a href="play.html" class="btn-header-play" >Play</a>
+                <a href="index.html" class="btn-header-menu">Menu</a>
+            </div>
+            <div class="menu-absolute">
+                <a href="play.html" class="btn-header-play-responsive" aria-label="Play the game"><i class="fas fa-play"></i></a>
+                <a href="index.html" class="btn-header-menu-responsive" aria-label="Go back to menu"><i class="fas fa-bars"></i></a>
+            </div>
+        </header>
+        <!-- HEADER ends here-->
+
+        <!-- HOW TO PLAY starts here-->
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 bgrd-vdarkgreen margin-top-twentyfive drop-shadow">
+                <h2 class="heading-how">How to play</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center margin-bottom-twentyfive">
+            <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 bgrd-beige howtoplay-content padding-top-fifty drop-shadow">
+                <p><span class="text-bold">Now We Flip is the "Memory" game meets the "Rock, Paper, Scissors".</span></p>
+                <p>Each player has 10 cards:</p>
+                <img class="img-how-desktop" src="assets/images/each-player-cards-desktop.png" alt="Each player has 10 cards">
+                <img class="img-how-mobile" src="assets/images/each-player-cards-mobile.png" alt="Each player has 10 cards">
+                <p>Cards are randomly placed face-down.
+                Players take turns, flipping face-up 2 cards at the time, trying to find <span class="text-bold">matching pairs</span> and eliminating other player’s cards in a “Rock, Paper, Scissors” style match.
+                </p>
+                <p>The matching pair is 2 cards that meet the following conditions:</p>
+                <ol>
+                    <li>Cards are in different colours (red and green).</li>
+                    <li>Cards have different symbols (ex. Rock and Paper).</li>
+                    <li>None of the cards is an X card.</li>
+                </ol>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/matching-pair-desktop.png" alt="Example of a matching pair">
+                    <img class="img-how-mobile" src="assets/images/matching-pair-mobile.png" alt="Example of a matching pair">
+                    <figcaption>Example of a matching pair.</figcaption>
+                </figure>
+                <p>2 cards that don’t meet the above conditions is called a neutral pair.</p>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/neutral-pair-desktop.png" alt="Examples of neutral pairs">
+                    <img class="img-how-mobile" src="assets/images/neutral-pair-mobile.png" alt="Examples of neutral pairs">
+                    <figcaption>Examples of neutral pairs.</figcaption>
+                </figure>
+                <p>Flipping the matching card pair makes the 2 cards battle and the <span class="text-bold">winning card</span> is determined according to the “Rock, Paper, Scissors” rules (Rock beats Scissors, Scissors beat Paper, Paper beats Rock).
+                The winning card stays in the game, the <span class="text-bold">loosing card</span> is removed. In case of neutral card pair there is a draw and both cards stay in the game.
+                </p>
+                <p>When an active player flips a matching pair of cards and their card is the loosing card - that card is still removed from the game.
+                Therefore players need to be careful on their turns, not to draw a loosing pair.
+                On their turn players can flip only 2 cards. Player’s turn does not continue after successfully finding a winning pair.
+                </p>
+                <p>The player panel helps to keep track of the cards lost by each player.</p>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/player-panel-desktop.png" alt="Player panel">
+                    <img class="img-how-mobile" src="assets/images/player-panel-mobile.png" alt="Player panel">
+                    <figcaption>Example: Green lost 2 x Paper cards and 1 x Rock card.</figcaption>
+                </figure>
+                <p>There are two <span class="text-bold">X cards</span> in the game, one in each player’s colour.</p>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/xcard-desktop.png" alt="X cards">
+                    <img class="img-how-mobile" src="assets/images/xcard-mobile.png" alt="X cards">
+                </figure>
+                <p>A player’s X card gets activated once the 3rd card in one suit is lost.
+                The X card becomes then an extra (4th) card in that suit and it’s marked with a little ‘x’ beside it, to indicate that this is a <span class="text-bold">converted X card</span>.
+                The converted X card behaves like the card of the suit it has been converted to, so for ex. if it is a Rock, it defeats the Scissors and loses to Paper.
+                </p>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/red-turnsx-desktop.png" alt="Red X becomes paper">
+                    <img class="img-how-mobile" src="assets/images/red-turnsx-mobile.png" alt="Red X becomes paper">
+                    <figcaption>Example: Red lost 3 x Paper cards. Red X becomes the red Paper.</figcaption>
+                </figure>
+                <p>The purpose of the converted X card is to be a neutral card early in the game (creating accidental or deliberate draws), and when converted - to give a player,
+                    who lost their full suit of cards too early in the game, an extra opportunity to continue battling with that suit.
+                </p>
+                <p><span class="text-bold">The objective of the game is to remove 2 full suits of cards of the opponent.</span> The first player to do it <span class="text-bold">wins the game.</span></p>
+                <figure>
+                    <img class="img-how-desktop" src="assets/images/green-lost-desktop.png" alt="The player panel - green lost">
+                    <img class="img-how-mobile" src="assets/images/green-lost-mobile.png" alt="The player panel - green lost">
+                    <figcaption>Example: Green lost 3 x Paper cards and 3 x Scissors cards, Red wins the game. The X card is not considered for in the winning condition, so it does not matter whether it was removed or not.</figcaption>
+                </figure>
+                <a href="play.html" class="margin-top-fifty btn-main bgrd-red">Play</a>
+                <a href="index.html" class="margin-top-twentyfive margin-bottom-fifty btn-main bgrd-vdarkgreen">Menu</a>
+            </div>
+        </div>
+        <div class="footer-bar">
+        </div>
+        <!-- HOW TO PLAY ends here-->
+
+    </div>
+
+   
+
+    <script src="assets/js/script.js"></script>
+    
+</body>
+</html>
