@@ -4,7 +4,8 @@ TABLE OF CONTENTS
     1. Main page
     2. How to Play page
     3. Play page
-    4. Media querries
+    4. Elements activated or updated by JavaScript
+    5. Media querries
 */
 
 /* -------------------- 0. General Rules & Utility Classes -------------------- */
@@ -24,7 +25,7 @@ h1, h2 {
     margin-bottom: 0px;
 }
 
-figcaption {
+figcaption, .outside-link {
     font-style: italic;
     font-size: .875rem;
     text-align: center;
@@ -32,6 +33,12 @@ figcaption {
     line-height: 1.125rem;
     max-width: 575px;
     margin: auto;
+}
+
+.outside-link {
+    text-transform: none;
+    box-shadow: none;
+    font-weight: 600;
 }
 
 .text-bold {
@@ -70,6 +77,10 @@ figcaption {
     background-color: #676d5f;
 }
 
+.margin-top-ten {
+    margin-top: 10px;
+}
+
 .margin-top-twentyfive {
     margin-top: 25px;
 }
@@ -84,6 +95,10 @@ figcaption {
 
 .margin-top-hundred {
     margin-top: 100px;
+}
+
+.margin-bottom-ten {
+    margin-bottom: 10px;
 }
 
 .margin-bottom-twentyfive {
@@ -300,7 +315,7 @@ a.btn-main:hover {
 }
 
 .card {
-    width: 100%;
+    width: auto;
     height: auto;
     margin: 8px 0px;
     box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
@@ -330,7 +345,97 @@ a.btn-main:hover {
     padding: 4px;
 }
 
-/* -------------------- 4. Media Querries -------------------- */
+
+/* -------------------- 4. Elements activated or updated by JavaScript -------------------- */
+
+/* Cards */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100vh;
+    width: auto;
+}
+
+.js-card {
+    width: 23%;
+    max-height: 100%;
+    margin: 3px;
+    box-shadow: 6px 6px 7px rgba(0,0,0,0.3);
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+/* Score */
+.score {
+    position: absolute;
+    top: 15px;
+    left: 250px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+}
+
+.points {
+    margin: 0px;
+    font-size: .75rem;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 2.5rem;
+    padding: 0px;
+    margin: 0px;
+    line-height: 2.75rem;
+}
+
+/* Win/Lose message */
+#win-message, #lose-message {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win, #lose {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#win span, #lose span {
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#freeze-flip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0);
+    visibility: hidden;
+}
+
+/* -------------------- 5. Media Querries -------------------- */
 
 @media screen and (max-width: 1199px) {
 	.howtoplay-content {
@@ -348,13 +453,22 @@ a.btn-main:hover {
         width: 70px;
         margin: 0px 3px;
     }
+
+    .score {
+        left: 150px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
    
+    .score {
+        left: 50px;
+    }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .player-panel-background {
         height: auto;
         padding: 0px;
@@ -433,6 +547,22 @@ a.btn-main:hover {
     .menu-absolute {
         right: 30px;
     }
+
+    .score {
+        left: 25px;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .points {
+        font-size: .5rem;
+        margin-top: 10px;
+    }
+
+    #result {
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -485,5 +615,9 @@ a.btn-main:hover {
 
     .player-panel-cards {
         margin: 0px -2px;
+    }
+
+    .js-card {
+        margin: 2px;
     }
 }

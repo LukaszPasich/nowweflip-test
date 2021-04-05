@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap"
         rel="stylesheet">
     <title>Now We Flip game</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.ico"/>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
         <div class="row justify-content-center margin-top-twentyfive">
 
             <!-- PLAYER PANEL (GREEN) starts here -->
-            <div class="col-12 col-sm-11 col-md-2 col-xl-1">
+            <div class="col-12 col-sm-11 col-md-2 col-xl-1 margin-bottom-ten margin-top-ten">
                 <div class="player-panel-background">
                     <div class="player-panel-cards"><i class="far fa-hand-rock player-panel-icons bgrd-vdarkgreen"></i>
                     </div>
@@ -63,43 +64,18 @@
             </div>
             <!-- PLAYER PANEL (GREEN) ends here -->
 
-            <!-- CARDS start here-->
+            <!-- CARDS start here -->
             <div class="col-12 col-sm-9 col-md-7 col-lg-6 col-xl-5">
                 <div class="row justify-content-center">
-                    <div class="col-3 padding-four">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                    </div>
-                    <div class="col-3 padding-four">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                    </div>
-                    <div class="col-3 padding-four">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                    </div>
-                    <div class="col-3 padding-four">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                        <img class="card" src="assets/images/card-back.png" alt="Back of the card">
-                    </div>
+                    <div class="grid">
+                        
+                    </div>    
                 </div>
             </div>
             <!-- CARDS end here -->
 
             <!-- PLAYER PANEL (RED) starts here -->
-            <div class="col-12 col-sm-11 col-md-2 col-xl-1">
+            <div class="col-12 col-sm-11 col-md-2 col-xl-1 margin-bottom-ten margin-top-ten">
                 <div class="player-panel-background">
                     <div class="player-panel-cards"><i class="far fa-hand-rock player-panel-icons bgrd-vdarkred"></i>
                     </div>
@@ -125,7 +101,39 @@
         <!-- PLAY AREA ends here-->
 
     </div>
+
+    <!-- Absolute position elements activated or updated by JavaScript   -->
+    
+    <!-- Points -->
+    <div class="score">
+        <p class="points">POINTS:</p>
+        <p id="result"></p>
+    </div>
+
+    <!-- Winning message -->
+    <div id="win-message">
+        <p id="win">Well done! <br>
+            <span>Your score is: <span id="points-win"></span></span> <br>
+            <a href="play.html" class="margin-top-twentyfive btn-main bgrd-red">Play Again</a>
+            <a href="index.html" class="margin-top-twentyfive btn-main bgrd-green">Menu</a>
+        </p>
+    </div>
+
+    <!-- Losing message -->
+    <div id="lose-message">
+        <p id="lose">Too bad...<br>
+            <span>Your score is: <span id="points-lose"></span></span> <br>
+            <a href="play.html" class="margin-top-twentyfive btn-main bgrd-red">Play Again</a>
+            <a href="index.html" class="margin-top-twentyfive btn-main bgrd-green">Menu</a>
+        </p>
+    </div>
+
     <script src="assets/js/script.js"></script>
+
+    <!-- Freeze the flip -->
+    <div id="freeze-flip">
+    </div>
+
 </body>
 
 </html>
