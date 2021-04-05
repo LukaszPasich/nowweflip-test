@@ -564,14 +564,6 @@ a.btn-main:hover {
         line-height: 1.5rem;
     }
 
-    .grid {
-    height: 60vh;
-}
-
-.js-card {
-    max-height: 18%;
-    margin: 2px;
-    }
 }
 
 @media screen and (max-width: 400px) {
@@ -626,7 +618,13 @@ a.btn-main:hover {
         margin: 0px -2px;
     }
 
+        .grid {
+    height: 60vh;
+}
+
     .js-card {
+        max-height: 18%;
         margin: 2px;
-    }
+        }
+
 }
