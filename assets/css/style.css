@@ -303,7 +303,7 @@ a.btn-main:hover {
 .background-play {
     background-color: #186b50;
     background-image: url("../images/background-game-table.jpg");
-    height: 100vh;
+    height: auto;
     background-position: center center;
 }
 
