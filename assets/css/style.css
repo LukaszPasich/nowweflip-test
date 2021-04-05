@@ -352,7 +352,7 @@ a.btn-main:hover {
 .grid {
     display: flex;
     flex-wrap: wrap;
-    height: auto;
+    max-height: 60vh;
     width: auto;
 }
 
